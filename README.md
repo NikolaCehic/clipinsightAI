@@ -1,180 +1,223 @@
-# ClipInsight AI
+<div align="center">
 
-Transform video content into multi-channel marketing campaigns with AI-powered content generation.
+# 🎬 ClipInsight AI
 
-## Features
+### *Your video just became a content empire*
 
-- **Video Analysis**: Upload MP4/MOV files for multimodal AI analysis using Google Gemini 2.0 Flash
-- **Multi-Format Output**: Generate newsletters, Twitter threads, LinkedIn posts, and SEO blogs
-- **Live Previews**: See how content looks in native platform mockups
-- **Project Management**: Save, edit, and manage generated content projects
-- **Analytics Dashboard**: Track usage and content generation metrics
-- **Subscription Billing**: Stripe-powered tiered pricing (Free, Pro, Enterprise)
-- **Platform Export**: Publish directly to Twitter, LinkedIn, and email (API integration required)
+<img src="https://img.shields.io/badge/Next.js-15-black?style=for-the-badge&logo=next.js" />
+<img src="https://img.shields.io/badge/Gemini-2.0_Flash-4285F4?style=for-the-badge&logo=google" />
+<img src="https://img.shields.io/badge/Powered_By-Coffee_&_AI-brown?style=for-the-badge&logo=buymeacoffee" />
 
-## Tech Stack
+---
 
-- **Framework**: Next.js 15 (App Router)
-- **UI**: shadcn/ui + Tailwind CSS
-- **Authentication**: NextAuth.js v5 (Google, GitHub OAuth + Demo credentials)
-- **Database**: Supabase (PostgreSQL)
-- **AI**: Google Gemini 2.0 Flash
-- **Payments**: Stripe
-- **Icons**: Lucide React
+**Upload a video. Get a Twitter thread, LinkedIn post, newsletter, AND a blog.**  
+*In the time it takes to refill your coffee. ☕*
 
-## Getting Started
+[Get Started](#-quick-start) • [How It Works](#-how-it-works) • [Features](#-features)
+
+</div>
+
+---
+
+## 🤔 The Problem
+
+You just recorded an amazing video. Now you need to:
+
+- [ ] Write a Twitter thread (280 chars is PAIN)
+- [ ] Craft a LinkedIn post (professional voice™)  
+- [ ] Draft a newsletter (engaging but not spammy)
+- [ ] Create an SEO blog (keywords, headings, the works)
+
+**Time estimate: 3-4 hours of your life you'll never get back.**
+
+## 💡 The Solution
+
+```
+📹 Video In → 🤖 AI Magic → 📱📧📝 Content Out
+```
+
+That's it. That's the whole app.
+
+---
+
+## ✨ Features
+
+| Feature | What it does | Why you'll love it |
+|---------|--------------|-------------------|
+| 🎥 **Video Analysis** | Understands your video using Gemini 2.0 Flash | It watches so you don't have to transcribe |
+| 🐦 **Twitter Threads** | Generates viral-ready thread content | Actually respects character limits |
+| 💼 **LinkedIn Posts** | Professional tone, engagement hooks | No more "I'm pleased to announce..." |
+| 📧 **Newsletters** | Ready-to-send email content | Your subscribers will think you hired a writer |
+| 📝 **SEO Blogs** | Keyword-optimized long-form content | Google will finally notice you |
+| 👀 **Live Previews** | See how it looks on each platform | No more surprises after posting |
+| 📊 **Analytics** | Track your content generation | Data nerds, rejoice |
+
+---
+
+## 🚀 Quick Start
 
 ### Prerequisites
 
-- Node.js 18+ 
-- npm or yarn
-- Supabase account (for database)
-- Google Cloud account (for Gemini API)
-- Stripe account (for billing, optional for MVP)
+- Node.js 18+ (because we're fancy like that)
+- A Supabase account (free tier works!)
+- A Google Cloud account (for the Gemini magic)
+- Stripe account (optional, for when you go Pro 💰)
 
-### 1. Clone and Install
+### Installation
 
 ```bash
+# Clone this bad boy
+git clone https://github.com/yourusername/clipinsight-ai.git
 cd clipinsight-ai
+
+# Install dependencies
 npm install
-```
 
-### 2. Environment Setup
-
-Copy the example environment file and fill in your credentials:
-
-```bash
+# Copy the env file (don't skip this, trust me)
 cp .env.example .env.local
-```
 
-Required environment variables:
-
-```env
-# Authentication
-NEXTAUTH_SECRET=your-secret-key
-NEXTAUTH_URL=http://localhost:3000
-
-# OAuth (at least one provider, or use demo login)
-GOOGLE_CLIENT_ID=
-GOOGLE_CLIENT_SECRET=
-GITHUB_ID=
-GITHUB_SECRET=
-
-# Supabase
-NEXT_PUBLIC_SUPABASE_URL=your-supabase-url
-SUPABASE_SERVICE_ROLE_KEY=your-service-role-key
-
-# Gemini AI
-GEMINI_API_KEY=your-gemini-api-key
-
-# Stripe (optional for MVP)
-STRIPE_SECRET_KEY=
-STRIPE_WEBHOOK_SECRET=
-NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=
-```
-
-### 3. Database Setup
-
-1. Create a new Supabase project at [supabase.com](https://supabase.com)
-2. Go to SQL Editor and run the schema in `supabase/schema.sql`
-3. Copy your project URL and service role key to `.env.local`
-
-### 4. Run Development Server
-
-```bash
+# Fire it up 🔥
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) to see the app.
+Then open [http://localhost:3000](http://localhost:3000) and prepare to be amazed.
 
-## Project Structure
+---
+
+## 🔧 How It Works
+
+```
+┌─────────────────────────────────────────────────────────────────┐
+│                                                                 │
+│   📹 Upload Video                                               │
+│        │                                                        │
+│        ▼                                                        │
+│   🧠 Gemini 2.0 Flash analyzes video                           │
+│      • Transcription                                            │
+│      • Key moments detection                                    │
+│      • Topic extraction                                         │
+│        │                                                        │
+│        ▼                                                        │
+│   ✍️  AI generates platform-specific content                   │
+│      • Twitter thread (with 🔥 hooks)                          │
+│      • LinkedIn post (professional mode)                        │
+│      • Newsletter (subscriber-friendly)                         │
+│      • SEO Blog (Google-approved™)                             │
+│        │                                                        │
+│        ▼                                                        │
+│   👀 Preview → ✏️ Edit → 🚀 Publish                            │
+│                                                                 │
+└─────────────────────────────────────────────────────────────────┘
+```
+
+---
+
+## 💳 Pricing
+
+| Tier | Price | What You Get |
+|------|-------|--------------|
+| **Free** | $0 | 3 videos/month • Perfect for testing the waters |
+| **Pro** | $29/mo | 50 videos/month • Priority processing • Analytics • Direct publishing |
+| **Enterprise** | $99/mo | Unlimited everything • Priority support • Custom integrations |
+
+---
+
+## 🏗️ Tech Stack
+
+<table>
+<tr>
+<td align="center" width="96">
+<img src="https://skillicons.dev/icons?i=nextjs" width="48" height="48" alt="Next.js" />
+<br>Next.js 15
+</td>
+<td align="center" width="96">
+<img src="https://skillicons.dev/icons?i=tailwind" width="48" height="48" alt="Tailwind" />
+<br>Tailwind
+</td>
+<td align="center" width="96">
+<img src="https://skillicons.dev/icons?i=supabase" width="48" height="48" alt="Supabase" />
+<br>Supabase
+</td>
+<td align="center" width="96">
+<img src="https://skillicons.dev/icons?i=typescript" width="48" height="48" alt="TypeScript" />
+<br>TypeScript
+</td>
+</tr>
+</table>
+
+**Plus:** shadcn/ui • NextAuth.js v5 • Google Gemini • Stripe • Lucide Icons
+
+---
+
+## 📁 Project Structure
 
 ```
 src/
 ├── app/
-│   ├── (auth)/          # Login/Register pages
-│   ├── (dashboard)/     # Protected dashboard pages
-│   ├── (marketing)/     # Public marketing pages
-│   └── api/             # API routes
+│   ├── (auth)/          # 🔐 Login stuff
+│   ├── (dashboard)/     # 📊 Where the magic happens
+│   ├── (marketing)/     # 🎯 Landing pages that convert
+│   └── api/             # 🔌 Backend brains
 ├── components/
-│   ├── ui/              # shadcn/ui components
-│   ├── dashboard/       # Dashboard-specific components
-│   ├── content/         # Content preview components
-│   └── marketing/       # Landing page components
+│   ├── ui/              # 🎨 Pretty buttons and things
+│   ├── dashboard/       # 📈 Dashboard widgets
+│   └── content/         # 📝 Content previews
 ├── lib/
-│   ├── auth.ts          # NextAuth configuration
-│   ├── supabase.ts      # Supabase client
-│   ├── gemini.ts        # Gemini AI integration
-│   └── stripe.ts        # Stripe configuration
-└── types/               # TypeScript types
+│   ├── gemini.ts        # 🤖 AI integration
+│   ├── supabase.ts      # 🗄️ Database stuff
+│   └── stripe.ts        # 💰 Money handler
+└── types/               # 📋 TypeScript happiness
 ```
 
-## API Routes
+---
 
-| Route | Method | Description |
-|-------|--------|-------------|
-| `/api/auth/[...nextauth]` | GET/POST | NextAuth.js authentication |
-| `/api/generate` | POST | Generate content from video |
-| `/api/projects` | GET/POST/PUT/DELETE | CRUD operations for projects |
-| `/api/export/[platform]` | POST | Export content to platforms |
-| `/api/webhooks/stripe` | POST | Stripe webhook handler |
-| `/api/webhooks/stripe/checkout` | POST | Create checkout session |
+## 🧪 Demo Mode
 
-## Subscription Tiers
+Don't want to set up OAuth? No problem! 
 
-| Tier | Price | Credits | Features |
-|------|-------|---------|----------|
-| Free | $0 | 3/month | Basic content generation |
-| Pro | $29/month | 50/month | Priority processing, analytics, direct publishing |
-| Enterprise | $99/month | Unlimited | All features + dedicated support |
+We've got a demo login that works with any email. Perfect for:
+- Kicking the tires
+- Impressing your boss
+- Procrastinating productively
 
-## Demo Mode
+---
 
-The app includes a demo login option that doesn't require OAuth setup. Use any email address to sign in with the demo credentials provider.
-
-## Deployment
+## 🚢 Deployment
 
 ### Vercel (Recommended)
 
-1. Push your code to GitHub
-2. Import the repository to Vercel
-3. Add environment variables in Vercel dashboard
-4. Deploy
+1. Push to GitHub
+2. Import to Vercel
+3. Add env vars
+4. Click deploy
+5. Tell everyone you're a DevOps engineer now
 
-### Stripe Webhooks
+---
 
-For production, set up Stripe webhooks:
+## 🤝 Contributing
 
-1. Go to Stripe Dashboard > Developers > Webhooks
-2. Add endpoint: `https://your-domain.com/api/webhooks/stripe`
-3. Select events: `checkout.session.completed`, `customer.subscription.*`, `invoice.*`
-4. Copy the webhook signing secret to `STRIPE_WEBHOOK_SECRET`
+Found a bug? Want a feature? PRs are welcome!
 
-## Platform Integrations (Phase 5)
+1. Fork it
+2. Branch it (`git checkout -b feature/amazing-thing`)
+3. Commit it (`git commit -m 'Add amazing thing'`)
+4. Push it (`git push origin feature/amazing-thing`)
+5. PR it
 
-To enable direct publishing:
+---
 
-### Twitter/X
-1. Create a Twitter Developer account
-2. Create an app with OAuth 2.0 permissions
-3. Add API keys to environment variables
+## 📜 License
 
-### LinkedIn
-1. Create a LinkedIn Developer app
-2. Enable Marketing API access
-3. Add client credentials to environment variables
+MIT — Do whatever you want, just don't blame us. 
 
-### Email (Newsletter)
-Integrate with your preferred email service:
-- SendGrid
-- Resend
-- Mailchimp
-- etc.
+---
 
-## License
+<div align="center">
 
-MIT
+### Built with 🧠 by humans and 🤖 by AI
 
-## Support
+**[⬆ Back to top](#-clipinsight-ai)**
 
-For questions or issues, please open a GitHub issue or contact support@clipinsight.ai
+*If this saved you time, consider giving it a ⭐*
+
+</div>
